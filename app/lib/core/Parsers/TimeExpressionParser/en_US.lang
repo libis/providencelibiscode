@@ -1,35 +1,34 @@
 # *** use ONLY lowercase letters in lists: input will be forced to lowercase for comparison ***
 
 # List month names; used whenever name of month needs to be displayed
-monthList = [january, february, march, april, may, june, july, august, september, october, november, december]
+monthList = [januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december]
 
 # *** the following list of months is for display and *SHOULD* be capitalized where appropriate
-monthListDisplay = [January, February, March, April, May, June, July, August, September, October, November, December]
+monthListDisplay = [januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december]
 
 # Hash table mapping acceptable month names to the display names defined in 'monthList'
 monthTable = {
-	jan = january, jan. = january,
-	feb = february, feb. = february,
-	mar = march, mar. = march,
+	jan = januari, jan. = januari,
+	feb = februari, feb. = februari,
+	mar = maart, mar. = maart,
 	apr = april, apr. = april,
-	ma = may,
-	jun = june, jun. = june,
-	jul = july, jul. = july,
+	ma = mei,
+	jun = juni, jun. = juni,
+	jul = juli, jul. = juli,
 	aug = august, aug. = august,
 	sep = september, sep. = september,
-	sept = september, sept. = september,
-	oct = october, oct. = october,
+	oct = oktober, oct. = oktober,
 	nov = november, nov. = november,
 	dec = december, dec. = december
 }
 
 # List of day names, starting with Sunday
-dayListDisplay = [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+dayListDisplay = [zondag, maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag]
 
-rangePreConjunctions = [from, between]
-rangeConjunctions = [-, to, and, .., through, or]
+rangePreConjunctions = [van, vanaf, tussen]
+rangeConjunctions = [tot, -, en, .., tem, t.e.m]
 
-dateTimeConjunctions = [at,@]
+dateTimeConjunctions = [om,@]
 
 dateDelimiters = [/,-,.]
 timeDelimiters = [:,.]
@@ -42,7 +41,7 @@ meridianTable = {
 	p.m. = pm
 }
 
-dateCircaIndicator = [circa, c, c., ca, ca., possibly, probably]
+dateCircaIndicator = [circa, c, c., ca, ca.]
 dateUncertaintyIndicator = [~]
 dateUncertaintyYearIndicator = [y]
 dateUncertaintyDayIndicator = [d]
@@ -50,61 +49,54 @@ dateUncertaintyDayIndicator = [d]
 # What to use to indicate a geological date ("millions of years ago")
 dateMYA = [mya]
 
-dateADIndicator = CE
-dateBCIndicator = BCE
+dateADIndicator = ad
+dateBCIndicator = bc
 ADBCTable = {
-	ad = CE,
-	a.d. = CE,
-	AD = CE,
-	bc = BCE,
-	b.c. = BCE,
-	BC = BCE,
-	c.e. = CE,
-	b.c.e. = BCE,
-	ce = CE,
-	bce = BCE
+	a.d. = ad, n.Chr. = ad, na Chr. = ad, na Christus = ad, nc = ad,
+	b.c. = bc, v.Chr. = bc, voor Christus = bc, vc = bc 
 }
 
-nowDate = [now]
-todayDate = [today]
-yesterdayDate = [yesterday]
-tomorrowDate = [tomorrow]
-undatedDate = [undated, unknown]
+nowDate = [nu]
+todayDate = [vandaag]
+yesterdayDate = [gisteren]
+tomorrowDate = [morgen]
+undatedDate = [undated, unknown, s.d., sd]
 
-presentDate = [present, ?, ??, ???, ????]
-beforeQualifier = [before, prior to]
-diedQualifier = [d., d, died]
-afterQualifier = [after, later than]
-bornQualifier = [b., b, born]
+presentDate = [heden, ?, ??, ???, ????]
+beforeQualifier = [voor]
+diedQualifier = [died, d, d.]
+afterQualifier = [na]
+bornQualifier = [born, b, b.]
 
 # Text to indicate century (as in "20th century")
-centuryIndicator = [century, cent]
+centuryIndicator = [eeuw]
 
 # Text to indicate decdae (as in "1920s")
 decadeIndicator = [s]
 
 # list of numeric suffixes, starting with the one for zero
 # (eg. 0th, 1st, 2nd, 3rd would be a list like so: [th, st, nd, rd])
-ordinalSuffixes = [th, st, nd, rd]
-ordinalSuffixDefault = th
+# NL: irregular up until 20 - afterwards the default is "ste"
+ordinalSuffixes = [de, ste, de, de, de, de, de, de, ste, de, de, de, de, de, de, de, de, de, de, de, ste]
+ordinalSuffixDefault = ste
 
 # in delimited dates (ex. 12/10/2009) is the first number a month or a day?
 # set to "0" for European style dates (day comes first); "1" for American-style dates (month comes first)
-monthComesFirstInDelimitedDate = 1
+monthComesFirstInDelimitedDate = 0
 
 # character(s) to append to day in full (not delimited) date
 # eg. in the date "1. February 2009", "." is the daySuffix
 # Note: you can put arbitrary text here - only punctuation
-daySuffix = 
+daySuffix =
 
 # Definite articles
-definiteArticles = [the]
+definiteArticles = [de, het]
 
 # Indefinite articles
-indefiniteArticles = [a, an]
+indefiniteArticles = [een]
 
 # Seasons
 winterSeason = [winter]
-springSeason = [spring]
-summerSeason = [summer]
-autumnSeason = [autumn, fall]
+springSeason = [spring, lente]
+summerSeason = [summer, zomer]
+autumnSeason = [autumn, fall, herst]
